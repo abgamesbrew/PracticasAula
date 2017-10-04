@@ -1,5 +1,5 @@
-es\albarregas\servlets\FormularioSimple.class
-es\albarregas\servlets\CicloVida.class
-es\albarregas\servlets\Holamundo.class
-es\albarregas\servlets\FormularioComplejo.class
-es\albarregas\servlets\Registro.class
+es/albarregas/servlets/CicloVida.class
+es/albarregas/servlets/Holamundo.class
+es/albarregas/servlets/Registro.class
+es/albarregas/servlets/FormularioSimple.class
+es/albarregas/servlets/FormularioComplejo.class

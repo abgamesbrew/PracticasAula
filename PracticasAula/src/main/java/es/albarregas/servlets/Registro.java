@@ -67,7 +67,7 @@ public class Registro extends HttpServlet {
     boolean fechacorrecta=comprobarFecha(ano,mes,dia);//** metodo de validación de fechas **//
     //** fin de la comprobacion de fecha **//          
    
-    
+// EXISTEN OTRAS MANERAS DE HACERLO DE MANERA MAS ELEGANTE Y PROFESIONAL   
     if(request.getParameter("Nombre")== "" || request.getParameter("Usuario") == "" || request.getParameter("Contrasena")== "" || fechacorrecta==false){//** si un campo requerido o la fecha no esta bien pasamos por este if **//
         if(request.getParameter("enviado") != null){//** si venimos del formulario de error de datos nos pasamos de nuevo al formulario principal **//
           formulario(response,request,mapa,fechacorrecta);  
@@ -86,6 +86,7 @@ public class Registro extends HttpServlet {
             out.println("<body>");
             out.println("<div id=\"todo\">");
             out.println("<h1>Errores en el registro</h1>");
+// TODO ESTO SE REALIZA CON UN SIMPLE FOREACH O RECORRIENDO EL MAPA COMO EN EL FORMULARIO COMPLEJO
             out.println("<form action=\"/PracticasAula/registro\" method=\"post\">");//** inicio del formulario
             
             elementos=mapa.get("Nombre");
@@ -159,6 +160,7 @@ public class Registro extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<div id=\"todo\">");
+// SE CONSIGUE CON BASTANTE MENOS CODIGO
             out.println("<h1>Registro completado con éxito</h1>");
             
             //**inicio asignacion nombre y apellidos **//

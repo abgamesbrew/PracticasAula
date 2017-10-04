@@ -1,0 +1,15 @@
+EJECUCIÓN
+Al volver al formulario después de errores no seleccionas bien la fecha de nacimiento introducida.
+
+PROYECTO
+Sería conveniente utilizar un sólo fichero css para todo el proyecto.
+
+FICHERO REGISTRO.HTML
+Tienes diversos comentarios en el código
+
+SERVLET
+Tienes algunos comentarios en el código del servlet a modo de retroalimentación
+No comentas el código en los puntos interesantes para saber la funcionalidad que se va a realizar
+Todos las etiquetas select se pueden conseguir con procesos repetitivos
+
+CALIFICACIÓN DEL EJERCICIO -> 6.50

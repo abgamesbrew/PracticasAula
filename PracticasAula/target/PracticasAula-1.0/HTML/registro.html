@@ -161,7 +161,8 @@ and open the template in the editor.
                             <option value="2005">2005</option>
                            </optgroup> 
                         </select>
-                </tr>
+<!-- ESTA LÍNEA SOBRA -->
+                <!--</tr>-->
                     </td>
                 </tr>
                 </table>
@@ -187,7 +188,8 @@ and open the template in the editor.
                 </tr>
                 </table>
                 </fieldset>
-                </fieldset>
+<!-- ESTA LÍNEA SOBRA -->
+                <!--</fieldset>-->
                 <fieldset>
                     <legend>Informaci&oacute;n General</legend>
                     <table>
@@ -196,7 +198,9 @@ and open the template in the editor.
                         <label>Preferencias</label>
                     </td>
                      <td>
-                         <input type="checkbox" name="Preferencia" value="Deportes" selected="selected">
+                         <!--<input type="checkbox" name="Preferencia" value="Deportes" selected="selected">-->
+<!-- EL INPUT TYPE CHECKBOX NO TIENE EL ATRIBUTO SELECTED -->
+                         <input type="checkbox" name="Preferencia" value="Deportes" checked="checked">
                          <label for="prefe1">Deporte</label>
                          <br/>
                          <input type="checkbox"  name="Preferencia" value="Lectura">
