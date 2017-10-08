@@ -8,6 +8,10 @@ package es.albarregas.servlets;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -25,12 +29,18 @@ import javax.servlet.http.HttpServletResponse;
     , @WebInitParam(name = "Vender", value = "No")
     ,    @WebInitParam(name = "Tercero", value = "Tambien")})
 public class Config extends HttpServlet {
+    
+    private  Map<String,String> valores;
+
+    public Config() {
+        this.valores= new HashMap<String,String>();
+    }
 
     public void init(ServletConfig config){
         Enumeration<String> parametros= config.getInitParameterNames();
         while (parametros.hasMoreElements()){
             String parametro=parametros.nextElement();
-            System.out.println("Parámetro "+parametro+", valor: "+config.getInitParameter(parametro)); 
+            valores.put(parametro, config.getInitParameter(parametro));
         }
        
    }
@@ -42,10 +52,20 @@ public class Config extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet Config</title>");            
+            out.println("<title>Servlet Config</title>"); 
+            out.println("<meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"UTF-8\">");
+            out.println("<link rel=\"stylesheet\" href=\"CSS/conjunto.css\"/>");
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Servlet Config, tus resultados están en la consola del servidor web</h1>");
+            out.println("<div id=\"centroconfig\">");
+            out.println("<h1>Parametros recibidos</h1>");
+            Set s = valores.keySet();
+            Iterator it = s.iterator();
+            while(it.hasNext()){
+                String parametro= (String) it.next();
+                out.print("El parametro "+parametro+"tiene el valor: "+valores.get(parametro)+"<br/><br/>");
+            }
+            out.println("</div>");
             out.println("</body>");
             out.println("</html>");
         }

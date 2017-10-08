@@ -5,5 +5,6 @@ es\albarregas\servlets\CabecerasPeticion.class
 es\albarregas\servlets\CicloVida.class
 es\albarregas\servlets\Errores.class
 es\albarregas\servlets\FormularioComplejo.class
+es\albarregas\servlets\NullPointer.class
 es\albarregas\servlets\Registro.class
 es\albarregas\servlets\Holamundo.class

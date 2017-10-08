@@ -13,15 +13,29 @@ and open the template in the editor.
     text-align: center;
 }
 
-#centroindex{
-   margin: auto;
+#centroindex {
+    float: left;
+    margin: auto;
     background: beige;
-    width: 50%;
+    width: 49%;
     border: 1px solid gray;
     text-align: center;
     height: 100%;
-    font-size: 150%;
+    font-size: 110%;
 }
+
+#centroindex2 {
+    float: left;
+    margin: auto;
+    background: beige;
+    width: 49%;
+    border: 1px solid gray;
+    text-align: center;
+    height: 100%;
+    font-size: 110%;
+    margin-left: 1%;
+}
+
 
 #centroerrores{
     margin: auto;
@@ -31,3 +45,29 @@ and open the template in the editor.
     height: 100%;
     font-size: 150%;  
 }
+
+#centroconfig{
+  margin: auto;
+    width: 50%;
+    border: 1px solid blue;
+    text-align: center;
+    height: 100%;
+    font-size: 150%;   
+}
+
+#saludojsp{
+       margin: auto;
+    width: 50%;
+    border: 2px solid blue;
+    text-align: center;
+    height: 100%;  
+}
+
+#calculadorajsp{
+    margin: auto;
+    width: 50%;
+    border: 2px solid blue;
+    text-align: center;
+    height: 100%;
+}
+
