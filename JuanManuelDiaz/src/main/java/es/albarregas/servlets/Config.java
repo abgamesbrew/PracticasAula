@@ -63,7 +63,7 @@ public class Config extends HttpServlet {
             Iterator it = s.iterator();
             while(it.hasNext()){
                 String parametro= (String) it.next();
-                out.print("El parametro "+parametro+"tiene el valor: "+valores.get(parametro)+"<br/><br/>");
+                out.print("El parametro "+parametro+" tiene el valor: "+valores.get(parametro)+"<br/><br/>");
             }
             out.println("</div>");
             out.println("</body>");

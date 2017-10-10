@@ -20,7 +20,7 @@
     <body>
     <div id="calculadorajsp">
         <% Date fecha = new Date();
-        DateFormat formato = new SimpleDateFormat("d MMM YYYY HH:mm:ss a");//** formato que tendra nuestro Date **//
+        DateFormat formato = new SimpleDateFormat("EEEE d 'de' MMMM 'de' yyyy HH:mm:ss a");//** formato que tendra nuestro Date **//
         if (request.getParameter("operar") == null){//** Si no hemos pulsado el boton operar **//
             
         }else{//** si hemos pulsado el boton operar **//

@@ -71,3 +71,11 @@ and open the template in the editor.
     height: 100%;
 }
 
+#contadorsesion{
+  margin: auto;
+    width: 50%;
+    border: 2px solid blue;
+    text-align: center;
+    height: 100%;  
+}
+
