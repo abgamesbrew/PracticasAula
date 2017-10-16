@@ -79,3 +79,58 @@ and open the template in the editor.
     height: 100%;  
 }
 
+#identificacion{
+  margin: auto;
+    width: 50%;
+    border: 2px solid blue;
+    text-align: center;
+    height: 100%;  
+}
+
+#centrotienda{
+    margin: auto;
+    width: 50%;
+    border: 2px solid blue;
+    text-align: center;
+    height: 100%; 
+}
+
+.centroimagen{
+    width:50%;
+}
+
+#tiendajsp{
+    margin: auto;
+    width: 100%;
+    border: 2px solid blue;
+    text-align: center;
+    height: 100%;
+    overflow-y:hidden;
+}
+
+.tiendajspimagen{
+    width:10%;
+}
+
+h3{
+    color:red;
+}
+
+#tiendajspfinalizado{
+    margin: auto;
+    width: 100%;
+    border: 2px solid blue;
+    text-align: center;
+    height: 100%;
+    overflow-y:hidden;
+}
+
+#tiendajspfinalizado table{
+    margin: auto;
+    width: 50%;
+    border: 1px solid black;
+}
+
+#tiendajspfinalizado table td{
+    border: 1px solid black;
+}
