@@ -1,0 +1,7 @@
+es\albarregas\controllers\eleccion.class
+es\albarregas\pojos\Eleccion.class
+es\albarregas\pojos\Contenido.class
+es\albarregas\models\CalcularCuota.class
+es\albarregas\controllers\edificio.class
+es\albarregas\controllers\contenido.class
+es\albarregas\pojos\Edificio.class
