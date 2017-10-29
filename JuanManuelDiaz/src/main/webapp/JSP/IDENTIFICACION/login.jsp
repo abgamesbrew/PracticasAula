@@ -43,6 +43,7 @@
         <div id="identificacion">
             <h1>Proceso de identificacion</h1>
             <% if(fecha != null){//** si la fecha no es nula, le daremos el valor **//%>
+<%-- NO VISUALIZAS LA FECHA ACTUAL EN EL CASO DE QUE NO EXISTA LA COOKIE --%>
             <p><strong>La fecha del ultimo acceso fue: </strong><%= fecha.getValue() %></p>
             <%}%>
             <% if(request.getParameter("error") != null){//** leeremos el parametro error y dependiendo del error mostraremos un mensaje u otro **//

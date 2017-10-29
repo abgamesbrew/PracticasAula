@@ -96,6 +96,7 @@
 
                     }//** if animales size>=1 **//
                     else{//** si hay menos de un animal, no hay que buscar nada y se añade el nuevo **//
+                        // TANTO EN EL IF COMO EN EL ELSE REALIZAS LA MISMA INSTRUCCIÓN. MEJOR PONLA FUERA
                         animales.add(robot);
                         sesionok.setAttribute("animales", animales);
                     }
@@ -125,7 +126,8 @@
                 if(aniadido != null){//** Si se ha añadido otro item al ArrayList de la sesion mostraremos este mensaje **//%>
                 <h4><strong><%= aniadido %></strong></h4>
                 <%}%>
-            <form method="post" acction="tienda.jsp"/>
+                <%-- EL ATRIBUTO ES ACTION --%>
+            <form method="post" action="tienda.jsp"/>
             <label><strong>Selecciona un animal robótico</strong></label> <br/>
                 <select name="animales" size="6">
                     <option value="iDino3.0">iDino 3.0</option>
