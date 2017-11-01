@@ -1,0 +1,49 @@
+AvistamientosJuanma:
+
+-consta de un index.html con un formulario que se envia a nuestro controlador ControladorAnillas
+
+-ControladorAnillas carga las variables necesarias para realizar una consulta y a falta de Beans..
+
+		---Se podia utilizar un Map. o un ArrayList<ArrayList<String>> o una matriz.
+	 
+		---He optado por la segunda opción dado que la matriz estaba dándome problemas. Y el mapa necesita mas recursos dado que hay
+		que obtener el keyset y recorrer cada uno de los arraylist que tenga dentro para guardar la información.
+
+		---La explicacion del porque elegi la segunda opción es porque solo con un bucle for he podido rellenar y recorrer nuestra consulta a la base de datos y lo considero mas eficiente
+
+
+	--Como tomcat 9 da error al guardar espacio en la Cookie hubo que usar una clase especial para que no diera errores (java.net.encoder)
+	
+	--Buscamos la Cookie y dependiendo de los requerimientos y del relleno del formulario, se recoge el nombre de la cookie, se recoge el nombre del formulario o se deja en blanco
+	e igualmente la añadimos al navegador con un "". Tambien añadimos un atributo al request con el valor del nombre para no crear un bucle en el VariosRegistros.jsp
+
+	--Creamos la conexion realizamos la consulta y al recorrer el resultado de esta misma aprovechamos ese bucle para insertar dentro de nuestro arraylist que contendra las filas
+	de la consulta un array auxiliar por cada vuelta que de el bucle para tener todos los valores agrupados
+
+	--Si el arraylist.size() que contiene nuestra consulta es menor que 1 como se ha indicado nos vamos para el error.jsp y si no pues añadimos el arraylist como atributo del request
+	y vamos a variosRegistros.jsp
+
+	--Cerramos todas las conexiones abiertas en nuestro finally de nuestro try{catch() que contiene los valores de conexion,preparada y resultado.
+
+-VariosRegistros.jsp mostrara el resultado de esta manera..
+
+	--Solo usaremos el arraylist contenedor de nuestra consulta y un string para el contenedor del nombre a mostrar
+	
+	--Si el valor de la cookie no viene vacio de nuestro controlador significa que se ha podido rellenar de alguna de las maneras indicadas
+	anteriormente y mostraremos el nombre y los apellidos reemplazando el "+" por " " (utf-8 nos convierte el espacio en un mas dentro de nuestro servlet si el valor viene dado de una cookie)
+	
+	--Mostramos la primera fila y la primera columna que contendra el nombre del animal en cuestion
+
+	--Recorremos con solo un bucle for nuestro arrayList y mostramos la columna que nos interesa de la consulta que sera la fecha y el lugar
+
+	--Al volver volveremos al index.jsp que tendrá nuestro nombre ya guardado (si es que esta relleno ) buscando en las cookies de nuestro navegador y si no.
+	Nos deja introducirlo de nuevo y nos mandara si o si a nuestro controlador. ControladorAnillas
+
+	
+
+
+	
+	
+	
+
+	
