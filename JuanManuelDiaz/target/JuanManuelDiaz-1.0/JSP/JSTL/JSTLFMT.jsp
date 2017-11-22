@@ -31,21 +31,21 @@
         </fmt:bundle>
         <!-- FINejemplo prueba bundle -->
         
-        <!-- format date -->
-        <h2>Format Date</h2>
-        <c:set var="fecha" value="${sessionScope.fecha}"/>
-        <fmt:formatDate dateStyle="long" type = "date" value = "${fecha}" />
-        <!-- FINformat date -->
-        
         <!-- setTimeZone -->
-        <c:set var="gmt" value="GMT+1"/>
+        <c:set var="gmt" value="GMT+10"/>
         <fmt:setTimeZone value = "${gmt}" />
         <!-- finsetTimeZone -->
         
         <!-- fmt:setLocale -->
-        <c:set var="pais" value="Italia"/>
+        <c:set var="pais" value="es_ES"/>
         <fmt:setLocale value = "${pais}"/>
         <!-- fmt:setLocale --> 
+        
+        <!-- format date -->
+        <h2>Format Date</h2>
+        <c:set var="fecha" value="${sessionScope.fecha}"/>
+        <fmt:formatDate dateStyle="long" type = "both" value = "${fecha}" />
+        <!-- FINformat date -->
         
         
         <form method="post" action="${pageContext.request.contextPath}/Controlajstl">

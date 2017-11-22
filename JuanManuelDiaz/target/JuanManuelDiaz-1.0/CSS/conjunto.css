@@ -36,6 +36,19 @@ and open the template in the editor.
     margin-left: 1%;
 }
 
+#centroindex3 {
+    clear:both;
+    float: left;
+    margin: auto;
+    background: beige;
+    width: 49%;
+    border: 1px solid gray;
+    text-align: center;
+    height: 100%;
+    font-size: 110%;
+    margin-top:2%;
+}
+
 
 #centroerrores{
     margin: auto;
